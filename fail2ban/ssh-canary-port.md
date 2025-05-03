@@ -1,6 +1,6 @@
-## Fail2Ban with TCP/22 as Canary Port
+### Fail2Ban with TCP/22 as Canary Port
 
-### SSHD configuration
+#### SSHD configuration
 ```
 # /etc/ssh/sshd_config.d/51-custom.conf
 # Port 22 has no valid authentication mechanisms.
@@ -29,7 +29,7 @@ Match LocalPort $XYZ
   AllowTCPForwarding no
 ```
 
-### Fail2Ban Jails
+#### Fail2Ban Jails
 
 ```
 # /etc/fail2ban/jail.d/sshd.conf - SSH canary on port 22
