@@ -1,4 +1,4 @@
-## Dynamic Firewall Config
+## Dynamic Firewall Rules for CertBot Renewals
 ### Open or change firewall rules using CertBot hooks
 
 #### Basic state
