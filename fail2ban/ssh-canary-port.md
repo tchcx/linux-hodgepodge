@@ -1,4 +1,4 @@
-## Use TCP/22 as a canary and TCP/$XYZ as the actual SSH port
+## Fail2Ban with TCP/22 as Canary Port
 
 ### SSHD configuration
 ```
