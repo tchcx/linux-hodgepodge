@@ -1,5 +1,7 @@
 ### Duo Push 2FA for SSH and Sudo
 
+**Note:** keep a few root shells open (you might break both ssh and sudo). This is only applicable to Ubuntu 24. Other distributions, visit Cisco's documentation for pam_unix.
+
 #### Install Duo
 ```
 user@host:~$ echo "deb [arch=amd64] https://pkg.duosecurity.com/Ubuntu noble main" | sudo tee -a /etc/apt/sources.list.d/duosecurity.list
