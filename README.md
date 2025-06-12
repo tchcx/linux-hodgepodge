@@ -3,7 +3,7 @@ Random things I want to remember
 
 
 - Backups
-  - [rsync simple](https://github.com/tchcx/linux-hodgepodge/blob/main/backups/rsync_simple.sh)
+  - [rsync + gpgtar simple](https://github.com/tchcx/linux-hodgepodge/blob/main/backups/rsync_gpgtar_simple.sh)
 - CertBot
   - [Dynamic Firewall Rules for CertBot Renewals](https://github.com/tchcx/linux-hodgepodge/blob/main/certbot/dynamic_firewall_config.md)
 - Duo Security
