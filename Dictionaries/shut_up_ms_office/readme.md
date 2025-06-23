@@ -1,7 +1,9 @@
 ## Shut Up MS Office
 ### IT and Cybersecurity Terms
 
-Just a worldlist I threw together really quickly. Ideally I'll put together some scraping in Python with BeautifulSoup, some day. For now I did the quick 'n dirty route:
+Just a worldlist I threw together really quickly. ##Import it as a custom dictionary, see less red from spellcheck!
+
+Ideally I'll put together some scraping in Python with BeautifulSoup, some day. For now I did the quick 'n dirty route:
 
 ```
 shane@Shanes-Laptop tooldict cat cyberguideme:Tools:\ Cyber\ Security\ Tools.html|  grep "<li><a hre" | grep -oE ">[A-Za-z0-9_-]+<" | tr -d '><' >> source1.txt
