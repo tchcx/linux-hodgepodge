@@ -1,7 +1,7 @@
 ## Shut Up MS Office
 ### IT and Cybersecurity Terms
 
-Just a worldlist I threw together really quickly. ##Import it as a custom dictionary, see less red from spellcheck!
+Just a worldlist I threw together really quickly. **Import it as a custom dictionary, see less red from spellcheck!**
 
 Ideally I'll put together some scraping in Python with BeautifulSoup, some day. For now I did the quick 'n dirty route:
 
