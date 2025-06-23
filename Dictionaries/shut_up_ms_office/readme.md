@@ -31,5 +31,12 @@ shane@Shanes-Laptop tooldict % cat source*.txt | sort -d -u >> sorted_deduplicat
 
 shane@Shanes-Laptop tooldict % wc -l sorted_deduplicated.txt
 
-shane@Shanes-Laptop tooldict % cat Dictionary.dic | iconv -f ASCII -t UTF-16LE | unix2dos -u -ul >> Dict161.dic
+shane@Shanes-Laptop tooldict % cat Dictionary.dic | iconv -f ASCII -t UTF-16LE | unix2dos -u -ul >> Dict16LE.dic
+```
+
+Edit: OK I did a little beautiful soup and scraped names from the "Awesome" repos here. :P Recombined like so:
+
+```
+cat *.txt | sort -d -u | iconv -f ASCII -t UTF-16LE | unix2dos -u -ul >> Additions16LE.txt
+cat Additions16LE.txt Dict16LE.dic | dos2unix | sort -u -d | unix2dos > Expanded.dic
 ```
