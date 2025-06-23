@@ -6,6 +6,8 @@ Random things I want to remember
   - [rsync + gpgtar simple](https://github.com/tchcx/linux-hodgepodge/blob/main/backups/rsync_gpgtar_simple.sh)
 - CertBot
   - [Dynamic Firewall Rules for CertBot Renewals](https://github.com/tchcx/linux-hodgepodge/blob/main/certbot/dynamic_firewall_config.md)
+- Dictionaries
+  - [Shut Up Microsoft Office!](https://github.com/tchcx/linux-hodgepodge/tree/main/Dictionaries/shut_up_ms_office)
 - Duo Security
   - [Duo Push 2FA for SSH and Sudo](https://github.com/tchcx/linux-hodgepodge/blob/main/duo/pam_duo.md)
 - Fail2Ban
