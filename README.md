@@ -14,4 +14,4 @@ Random things I want to remember
   - [Fail2Ban with TCP/22 as Canary Port](https://github.com/tchcx/linux-hodgepodge/blob/main/fail2ban/ssh-canary-port.md)
   - [Apache2 Jails for AuthZ and Bots](https://github.com/tchcx/linux-hodgepodge/blob/main/fail2ban/apache2-jails.md)
 - Security
-  - [Bash Ransomer](https://github.com/tchcx/linux-hodgepodge/blob/main/security/bash_ransomer.sh)
+  - [Bash Ransomer](https://github.com/tchcx/linux-hodgepodge/tree/main/security/bash_ransomer)
