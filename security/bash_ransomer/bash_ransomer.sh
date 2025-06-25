@@ -14,7 +14,7 @@
 
 # 1) Running as root is DISALLOWED - reduces scope of oopsies
 # 2) Search recursion is limited to 1 - reduces depth of oopsies
-# 3) The plaintext files are not deleted. They are moved to .deleted_files
+# 3) The plaintext files are not deleted. They are moved to $RANSOMED_DIR
 
 # VARIABLES
 # IP and port of Python server
