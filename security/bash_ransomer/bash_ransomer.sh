@@ -107,7 +107,7 @@ find_files() {
 # Generate an actual encryption key from the keying material
 # In a weird and questionable way
 # Take username, groupname, and path of file, glue together with key material, and hash
-# I have no crypto justification I just want to mix more into the hash
+# I have no crypto JUSTIFICATION I just want to mix MOAR into the HASH
 
 encrypt_file() {
 
@@ -122,8 +122,14 @@ encrypt_file() {
     # Print out
     echo -e "FILE $1\n \tSHA256($hash_input)\n \t\t=>AES KEY $aes_sk" 
 
-    # Encrypt file
-    openssl enc -aes-256-ctr -pass pass:"$aes_sk" -iter 100 -a -in "$1" -out "$1.aes256.100"
+    # Dpn't delete files
+    # Rather, move them to a directory specified in the function call
+    if ! [[ -e "$2"]]; then
+      mkdir -p "$2"
+    
+    # Encrypt file; delete the original if successful
+    if openssl enc -aes-256-ctr -pass pass:"$aes_sk" -iter 100 -a -in "$1" -out "$1.aes256.100"; then
+      mv "$1" "$2" 
     
     # Not really necessary for local variables but eh
     unset hash_input
@@ -154,10 +160,9 @@ find_files "rx_dir" "exposed_files"
 # So far - we found all files via find_files(), which calls check_file()
 # We now loop over that and encryptthe files. We only need to transfer
 # the single secretm the other components (file ownership, path) are less like to change
+
 echo "---------ENCRYPTING---------"
 echo ":"
 for file in "${exposed_files[@]}"; do
-    encrypt_file "$file" # Always double-quote variable expansions
+    encrypt_file "$file" ".deleted_files"# Always double-quote variable expansions
 done
-
-rm -rf rx_dir
