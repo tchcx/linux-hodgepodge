@@ -15,3 +15,4 @@ Random things I want to remember
   - [Apache2 Jails for AuthZ and Bots](https://github.com/tchcx/linux-hodgepodge/blob/main/fail2ban/apache2-jails.md)
 - Security
   - [Bash Ransomer](https://github.com/tchcx/linux-hodgepodge/tree/main/security/bash_ransomer)
+  - [Bluing Install - RPi/venv](https://github.com/tchcx/linux-hodgepodge/blob/main/security/bluing-installation-rpi/readme.md)
