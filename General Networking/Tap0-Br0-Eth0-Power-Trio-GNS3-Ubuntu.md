@@ -29,6 +29,6 @@ sudo ip link set tap0 nomaster
 sudo ip link delete tap0
 sudo ip linke delete br0
 
-![image](https://github.com/user-attachments/assets/72046eaa-30d0-4409-9b18-5d2958aed384)
+![image](https://github.com/user-attachments/assets/b50f72b6-5a75-4c17-9a5b-ff95f5658239)
 
 ### Persistent
