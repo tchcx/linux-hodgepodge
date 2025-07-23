@@ -1,7 +1,8 @@
 # linux-hodgepodge
 Random things I want to remember
 
-
+- Networking
+  - [Tap0-Br0-Eth for GNS3]()
 - Backups
   - [rsync + gpgtar simple](https://github.com/tchcx/linux-hodgepodge/blob/main/backups/rsync_gpgtar_simple.sh)
 - CertBot
