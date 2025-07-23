@@ -1,6 +1,6 @@
 # Am I taking crazy pills?
 ## Is zstd actually that good?
 
-I shoot videos at ProRes 422 proxy, 1440p60. Even proxy, they're big boys. I've been compressing with bzip2 and thought 50% was a solid ratio. But got curious and gave zstd a shot.
+I shoot videos at ProRes 422 proxy, 1440p60. Even proxy, they're big boys. I've been compressing (for archiving) with bzip2 and thought 50% was a solid ratio. But got curious and gave zstd a shot.
 
 And, what?! How is this possible?
