@@ -2,7 +2,7 @@
 Random things I want to remember
 
 - Networking
-  - [Tap0-Br0-Eth for GNS3](/General Networking/Tap0-Br0-Eth0-Power-Trio-GNS3-Ubuntu.md)
+  - [Tap0-Br0-Eth for GNS3](https://github.com/tchcx/linux-hodgepodge/blob/main/General%20Networking/Tap0-Br0-Eth0-Power-Trio-GNS3-Ubuntu.md)
 
 - Backups
   - [rsync + gpgtar simple](https://github.com/tchcx/linux-hodgepodge/blob/main/backups/rsync_gpgtar_simple.sh)
