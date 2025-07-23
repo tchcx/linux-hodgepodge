@@ -9,6 +9,7 @@ And, what?! How is this possible?
 
 
 Catting -> STDIN bzip2 decompressing STDOUT -> STDIN Zstd compressing -> file
+
 ```
 ### Ad-hoc script
 # Loop over all these
