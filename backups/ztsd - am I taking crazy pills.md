@@ -42,36 +42,36 @@ done
 ```
 LOG FILE: Bzip2 Before, Zstd after
 -----------------------------------
-START:	01.02_Frame...  (16G)		07:19:01 (bzip2)
-END:	01.02_Framew...  (3.7G)		07:32:14 (zstd)
+START:	01.02_Frame...  (16G)		  07:19:01 (bzip2)
+END:	01.02_Framew...  (3.7G)		  07:32:14 (zstd)
 
-START:	01.03_Comm_... (9.9G)	  07:32:14 (bzip2)
-END:	01.03_Comm_C...  (2.7G)		07:35:40 (zstd)
+START:	01.03_Comm_... (9.9G)	    07:32:14 (bzip2)
+END:	01.03_Comm_C...  (2.7G)		  07:35:40 (zstd)
 
-START:	01.04_Report... (14G)		07:35:40 (bzip2)
-END:	01.04_Report...  (3.2G)		07:41:00 (zstd)
+START:	01.04_Report... (14G)		  07:35:40 (bzip2)
+END:	01.04_Report...  (3.2G)		  07:41:00 (zstd)
 
-START:	03.01 - Vuln... (30G)		07:41:00 (bzip2)
-END:	03.01 - Vuln... ( 5.8G)		07:52:13 (zstd)
+START:	03.01 - Vuln... (30G)	   	07:41:00 (bzip2)
+END:	03.01 - Vuln... ( 5.8G)		  07:52:13 (zstd)
 
-START:	03.01 - Vuln...(1.4G)	  07:52:13 (bzip2)
-END:	03.01 - Vuln...  (1.4G)	  07:52:40 (zstd)
+START:	03.01 - Vuln...(1.4G)	    07:52:13 (bzip2)
+END:	03.01 - Vuln...  (1.4G)	    07:52:40 (zstd)
 
-START:	04.07 - Soci... (14G)		07:52:40 (bzip2)
-END:	04.07 - Soci...  (3.1G)		07:59:03 (zstd)
+START:	04.07 - Soci... (14G)		  07:52:40 (bzip2)
+END:	04.07 - Soci...  (3.1G)		  07:59:03 (zstd)
 
-START:	04.08_Wirele... (16G)		07:59:03 (bzip2)
-END:	04.08_Wirele...  (4.1G)		08:06:08 (zstd)
+START:	04.08_Wirele... (16G)	    07:59:03 (bzip2)
+END:	04.08_Wirele...  (4.1G)		  08:06:08 (zstd)
 
-START:	04.08-DemoA... (5.2G)	  08:06:08 (bzip2)
-END:	04.08-DemoA....  (1.6G)		08:08:24 (zstd)
+START:	04.08-DemoA... (5.2G)	    08:06:08 (bzip2)
+END:	04.08-DemoA....  (1.6G)		  08:08:24 (zstd)
 
-START:	04.08-DemoB.... (12G)		08:08:24 (bzip2)
-END:	04.08-DemoB....  (2.7G)		08:13:55 (zstd)
+START:	04.08-DemoB.... (12G)		  08:08:24 (bzip2)
+END:	04.08-DemoB....  (2.7G)		  08:13:55 (zstd)
 
-START:	05.03 - Exfi... (21G)		08:13:55 (bzip2)
-END:	05.03 - Exfi...  (4.9G)		08:22:35 (zstd)
+START:	05.03 - Exfi... (21G)		  08:13:55 (bzip2)
+END:	05.03 - Exfi...  (4.9G)		  08:22:35 (zstd)
 
-START:	Text Process... (16G)		08:22:35 (bzip2)
-END:	Text Process...  (5.6G)		08:30:24 (zstd)
+START:	Text Process... (16G)		  08:22:35 (bzip2)
+END:	Text Process...  (5.6G)		  08:30:24 (zstd)
 ```
