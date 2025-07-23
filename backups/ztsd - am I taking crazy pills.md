@@ -45,8 +45,8 @@ LOG FILE: Bzip2 Before, Zstd after
 START:	01.02_Frame...  (16G)		  07:19:01 (bzip2)
 END:	01.02_Framew...  (3.7G)		  07:32:14 (zstd)
 
-START:	01.03_Comm_.... (9.9G)	  07:32:14 (bzip2)
-END:	01.03_Comm_C...,  (2.7G)		07:35:40 (zstd)
+START:	01.03_Comm_.... (9.9G)      07:32:14 (bzip2)
+END:	01.03_Comm_C...,  (2.7G)      07:35:40 (zstd)
 
 START:	01.04_Report... (14G)		  07:35:40 (bzip2)
 END:	01.04_Report...  (3.2G)		  07:41:00 (zstd)
