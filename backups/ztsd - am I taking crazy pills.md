@@ -75,3 +75,32 @@ END:	05.03 - Exfi...  (4.9G)		  08:22:35 (zstd)
 START:	Text Process... (16G)		  08:22:35 (bzip2)
 END:	Text Process...  (5.6G)		  08:30:24 (zstd)
 ```
+
+### Wild...
+```
+ls -Ahl *.bz2 *.zst | cut -c 28-34,47-60 | sed 's/J//'
+  16G 01.02_Framewor
+ 3.7G 01.02_Framewor
+ 9.9G 01.03_Comm_Col
+ 2.7G 01.03_Comm_Col
+  14G 01.04_Reportin
+ 3.2G 01.04_Reportin
+  30G 03.01 - Vulner
+ 5.8G 03.01 - Vulner
+ 868M 03.03 - Physic
+ 5.4G 04.03 Host-bas
+ 2.7G 04.06-Speciali
+  14G 04.07 - Social
+ 3.1G 04.07 - Social
+  16G 04.08_Wireless
+ 4.1G 04.08_Wireless
+ 5.2G 04.08-DemoA.mo
+ 1.6G 04.08-DemoA.mo
+  12G 04.08-DemoB.mo
+ 2.7G 04.08-DemoB.mo
+  21G 05.03 - Exfil.
+ 4.9G 05.03 - Exfil.
+ 1.6G DemoA.mov.zst
+  16G Text Processin
+ 5.6G Text Processin
+```
