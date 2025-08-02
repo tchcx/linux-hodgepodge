@@ -12,6 +12,7 @@
 
 function pdf_kinda_safe() {
   local url=$1
+  # basename gets raw file name; sed removes URL encoding
   local filename=$(basename $url | sed -e 's/%20/_/g' -e 's/%21/!/g' -e 's/%23/#/g' -e 's/%24/$/g' -e 's/%26/\&/g' -e "s/%27/'/g" -e 's/%28/(/g' -e 's/%29/)/g')
   echo -n "\nDownloading $url..."
   echo -n "\nDownloading to $filename..."
